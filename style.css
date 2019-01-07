@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+}
+.bored{
+   background-color:#FFFF;
+   display: flex;
+   flex-direction: column;
+}
+h1 {
+    font-size: 50px;
+}
+.container .game {
+    display: flex;
+    flex-direction: row;
+}
+.container .game h1{
+    font-size: 50px;
+}
+.bored .row-tic {
+    display: flex;
+    flex-direction: row;
+
+}
+.bored .row-tic .tic-box{
+    background-color:#4286f4;
+    width: 200px;
+    height: 200px;
+    border: 1px solid green;
+    font-size: 80px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.container .results {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+}
+.container .results p {
+    font-size: 40px;
+    border-bottom: 2px solid#4a00e0;    
+    margin-top: 20px;
+}
+.container .results #h1p {
+    font-size: 50px;
+    margin-top: 0px;
+    border-bottom: 3px solid#4a00e0;
+}
