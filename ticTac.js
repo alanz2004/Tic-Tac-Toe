@@ -1,15 +1,9 @@
-        var ticBox = document.querySelectorAll('.tic-box');
+ var ticBox = document.querySelectorAll('.tic-box');
         var ticBoxArray = Array.prototype.slice.call(ticBox, 0);
-        var h1Winner = document.querySelector('#winner');
-        var results = document.getElementById('rs');
-        var h1WinnerX = 'Winner is: X';
-        var tableWinnerX = '<p>The Winner is X</p>';
-        var h1Winnero = 'Winner is: O';
-        var tableWinnerO = '<p>The winner is O</p>';
-        var h1draw = 'Draw';
-        var tableWinnerDraw = '<p>Draw</p>';
-       
-        console.log(results);
+        var h1ScoreX = document.getElementById('h11');
+        var h1ScoreO = document.getElementById('h12');
+        var winsX = 0;
+        var winsO = 0;
         console.log(ticBoxArray);
         ticBox.forEach(function(tic){
            tic.addEventListener('click', circleOrIkes);
@@ -45,8 +39,8 @@
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1WinnerX;
-                     results.innerHTML = results.innerHTML + tableWinnerX;
+                winsX++;
+                h1ScoreX .innerHTML =  `X : ${winsX}`;
                      resetGame();
                         
             }else if(ticBoxArray[3].innerHTML == 'x' && ticBoxArray[4].innerHTML == 'x' && ticBoxArray[5].innerHTML == 'x'){
@@ -54,16 +48,17 @@
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                  h1Winner.innerHTML = h1WinnerX;
-                results.innerHTML = results.innerHTML + tableWinnerX;
+                winsX++;
+                  h1ScoreX .innerHTML =  `X : ${winsX}`;
                 resetGame();
             }else if(ticBoxArray[6].innerHTML == 'x' && ticBoxArray[7].innerHTML == 'x' && ticBoxArray[8].innerHTML == 'x'){
                 console.log('good job x is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1WinnerX;
-                results.innerHTML = results.innerHTML + tableWinnerX;
+                winsX++;
+                h1ScoreX .innerHTML =  `X : ${winsX}`;
+                
                 resetGame();
                
             }else if(ticBoxArray[0].innerHTML == 'x' && ticBoxArray[3].innerHTML == 'x' && ticBoxArray[6].innerHTML == 'x'){
@@ -71,40 +66,40 @@
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1WinnerX;
-                results.innerHTML = results.innerHTML + tableWinnerX;
+                winsX++;
+                h1ScoreX .innerHTML =  `X : ${winsX}`;
                 resetGame();
             }else if(ticBoxArray[1].innerHTML == 'x' && ticBoxArray[4].innerHTML == 'x' && ticBoxArray[7].innerHTML == 'x'){
                 console.log('good job x is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1WinnerX;
-                results.innerHTML = results.innerHTML + tableWinnerX;
+                winsX++;
+                h1ScoreX .innerHTML =  `X : ${winsX}`;
                 resetGame();
             }else if(ticBoxArray[2].innerHTML == 'x' && ticBoxArray[5].innerHTML == 'x' && ticBoxArray[8].innerHTML == 'x'){
                 console.log('good job x is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1WinnerX;
-                results.innerHTML = results.innerHTML + tableWinnerX;
+                winsX++;
+                h1ScoreX .innerHTML =  `X : ${winsX}`;
                 resetGame();
             }else if(ticBoxArray[0].innerHTML == 'x' && ticBoxArray[4].innerHTML == 'x' && ticBoxArray[8].innerHTML == 'x'){
                 console.log('good job x is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1WinnerX;
-                results.innerHTML = results.innerHTML + tableWinnerX;
+                winsX++;
+                h1ScoreX .innerHTML =  `X : ${winsX}`;
                 resetGame();
             }else if(ticBoxArray[2].innerHTML == 'x' && ticBoxArray[4].innerHTML == 'x' && ticBoxArray[6].innerHTML == 'x'){
                 console.log('good job x is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1WinnerX;
-                results.innerHTML = results.innerHTML + tableWinnerX;
+                winsX++;
+                h1ScoreX .innerHTML =  `X : ${winsX}`;
                 resetGame();
             }else {
                   //looping throw to bored to see if all the bored full and saying a draw if the bored full
@@ -123,8 +118,8 @@
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1draw;
-                results.innerHTML = results.innerHTML + tableWinnerDraw;
+                winsX = winsX;
+                h1ScoreX .innerHTML =  `X : ${winsX}`;
                 resetGame();
             }
         }       
@@ -137,64 +132,64 @@
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1Winnero
-                results.innerHTML = results.innerHTML + tableWinnerO;
+               winsO++;
+               h1ScoreO.innerHTML = `O : ${winsO}`;
                 resetGame();
             }else if(ticBoxArray[3].innerHTML == 'o' && ticBoxArray[4].innerHTML == 'o' && ticBoxArray[5].innerHTML == 'o'){
                 console.log('good job o is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1Winnero
-                results.innerHTML = results.innerHTML + tableWinnerO;
+               winsO++;
+               h1ScoreO.innerHTML = `O : ${winsO}`;
                 resetGame();
             }else if(ticBoxArray[6].innerHTML == 'o' && ticBoxArray[7].innerHTML == 'o' && ticBoxArray[8].innerHTML == 'o'){
                 console.log('good job o is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1Winnero
-                results.innerHTML = results.innerHTML + tableWinnerO;
+               winsO++;
+               h1ScoreO.innerHTML = `O : ${winsO}`;
                 resetGame();
             }else if(ticBoxArray[0].innerHTML == 'o' && ticBoxArray[3].innerHTML == 'o' && ticBoxArray[6].innerHTML == 'o'){
                 console.log('good job o is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1Winnero
-                results.innerHTML = results.innerHTML + tableWinnerO;
+               winsO++;
+               h1ScoreO.innerHTML = `O : ${winsO}`;
                 resetGame();
             }else if(ticBoxArray[1].innerHTML == 'o' && ticBoxArray[4].innerHTML == 'o' && ticBoxArray[7].innerHTML == 'o'){
                 console.log('good job o is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1Winnero
-                results.innerHTML = results.innerHTML + tableWinnerO;
+               winsO++;
+               h1ScoreO.innerHTML = `O : ${winsO}`;
                 resetGame();
             }else if(ticBoxArray[2].innerHTML == 'o' && ticBoxArray[5].innerHTML == 'o' && ticBoxArray[8].innerHTML == 'o'){
                 console.log('good job o is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1Winnero
-                results.innerHTML = results.innerHTML + tableWinnerO;
+               winsO++;
+               h1ScoreO.innerHTML = `O : ${winsO}`;
                 resetGame();
             }else if(ticBoxArray[0].innerHTML == 'o' && ticBoxArray[4].innerHTML == 'o' && ticBoxArray[8].innerHTML == 'o'){
                 console.log('good job o is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1Winnero
-                results.innerHTML = results.innerHTML + tableWinnerO;
+               winsO++;
+               h1ScoreO.innerHTML = `O : ${winsO}`;
                 resetGame();
             }else if(ticBoxArray[2].innerHTML == 'o' && ticBoxArray[4].innerHTML == 'o' && ticBoxArray[6].innerHTML == 'o'){
                 console.log('good job o is the winner');
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1Winnero
-                results.innerHTML = results.innerHTML + tableWinnerO;
+               winsO++;
+               h1ScoreO.innerHTML = `O : ${winsO}`;
                 resetGame();
               
             }else {
@@ -215,8 +210,8 @@
                 ticBoxArray.forEach(function(tic){
                         tic.removeEventListener('click', circleOrIkes);
                 });
-                h1Winner.innerHTML = h1draw;
-                results.innerHTML = results.innerHTML + tableWinnerDraw;
+                 winsO = winsO;
+                 h1ScoreO.innerHTML = `O : ${winsO}`;
                 resetGame();
             }
             }
@@ -231,4 +226,5 @@
           });      
          },1500)
         }
+      
       
